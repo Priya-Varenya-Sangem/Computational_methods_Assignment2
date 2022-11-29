@@ -82,13 +82,13 @@ The signal plots after the cubic splines filter restoration are as follows
 
 3. Comparing the two different interpolation methods, we notice that method using median filter with a window length of 11 achieves a lower MSE when compared to cubic splines.
 
-After listening to the two restored files, we see that the signals sounds very similar to the original uncorrupted signal.Hence, a proper Audio restoration is performed.
+After listening to the two restored files, we see that the signals sound very similar to the original uncorrupted signal.Hence, a proper Audio restoration is performed.
 
 
 ---
 ## Credits
 
-This code was developed for purely academic purposes by Priya Varenya Sangem (Priya_Varenya_Sangem) as part of the module Computational Methods 
+This code was developed for purely academic purposes by Priya Varenya Sangem (Priya-Varenya-Sangem) as part of the module Computational Methods 
 
 Resources:
 - <https://www.sciencedirect.com/topics/computer-science/median-filter#:~:text=A%20median%20filter%20is%20a,number%20of%20taps%20is%20used.>
