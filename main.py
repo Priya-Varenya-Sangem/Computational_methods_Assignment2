@@ -5,7 +5,8 @@ from playsound import playsound
 from scipy.io import wavfile
 import matplotlib.pyplot as plt
 from tqdm import tqdm
-from sklearn.metrics import mean_squared_error
+#from sklearn.metrics import mean_squared_error
+from time import sleep
 
 
 
@@ -41,11 +42,16 @@ org = np.array(org)
 #print(clicks)
 
 
-filterlength = 13
+filterlength = 5
 
 r = np.zeros(len(data))
 print("length of r"+ str(len(r)))
 print(max(clicks))
+
+for i in range(0,len(clicks)):
+    #print("hello1")
+    if clicks[i] != 0:
+        clicks[i] = 1
 
 for i in tqdm(range(0,len(clicks))):
     #print("hello1")
@@ -53,12 +59,12 @@ for i in tqdm(range(0,len(clicks))):
         med = medianFilter(data[i - (filterlength//2): i + (filterlength//2)], filterlength)
         #print("hello2")
         #print(med)
-        r[i] = med[len(med)//2]
-    else:
+        #r[i] = med[len(med)//2]
+    #else:
         #print("hello3")
-        r[i] = data[i]
+        #r[i] = data[i]
 
-r = np.array(r,dtype=np.int16)
+#r = np.array(r,dtype=np.int16)
 #t = range(0,samplerate * len(data))
 
 #Plotting graphs for input signals
@@ -78,11 +84,13 @@ r = np.array(r,dtype=np.int16)
 #print(len(clicks))
 
 #Median filtered signal
-y = medianFilter(data, filterlength)
+for i in tqdm(range(100)):
+    y = medianFilter(data, filterlength)
+    sleep(0.1)
 
 y = np.array(y)
 
-#r = (1 - clicks) * data + clicks * y
+r = (1 - clicks) * data + clicks * y
 
 #plt.rcParams["figure.figsize"] = [7.50, 3.50]
 #plt.rcParams["figure.autolayout"] = True
