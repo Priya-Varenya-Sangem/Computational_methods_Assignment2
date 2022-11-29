@@ -72,15 +72,13 @@ Both median filter and cubic splines filter performed a fairely good restoration
 
 The signal plots after the median filter restoration are as follows 
 
-**Median Filter Interpolation**
 <img src="Signal_plots_median.png" width="350">
 
 2. Using the cubic splines, we observe that the signal gets restored at the location of the clicks with the data predicted from the cubic splines function. 
 
 The signal plots after the cubic splines filter restoration are as follows 
 
-**Cubic Splines Interpolation**
-<img src="Signal_plots_cubicsplines.png" width="350">
+<img src="signal_plots_cubicsplines.png" width="350">
 
 3. Comparing the two different interpolation methods, we notice that method using median filter with a window length of 11 achieves a lower MSE when compared to cubic splines.
 
