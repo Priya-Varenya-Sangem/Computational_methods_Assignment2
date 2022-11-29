@@ -65,26 +65,26 @@ The project contains 4 python files
 ### Results
 
 Both median filter and cubic splines filter performed a fairely good restoration of audio by removing the clicks in the degraded signal.
-The signal plots for median filter and cubic spline filter can be seen in the following figures
-
-**Median Filter Interpolation**
-<img src="Signal_plots_median.png" width="350">
-
-**Cubic Splines Interpolation**
-<img src="Signal_plots_cubicsplines.png" width="350">
-
 
 1. For the median filter, different filter lengths were explored to test the effectiveness of the restoration. In particular, odd window lengths in the range 3 - 35 were tested and window length 11 was observed to deliver the lowest MSE for this particular signal, as shown in the figure below.
 
 <img src="MSE.png" width="350">
 
+The signal plots after the median filter restoration are as follows 
+
+**Median Filter Interpolation**
+<img src="Signal_plots_median.png" width="350">
 
 2. Using the cubic splines, we observe that the signal gets restored at the location of the clicks with the data predicted from the cubic splines function. 
 
+The signal plots after the cubic splines filter restoration are as follows 
 
-3. Comparing the two different interpolation methods, we notice that method using median filter with a window length of 11 achieves a lower MSE when compared to cubic splines. The runtime of XX method is .....
+**Cubic Splines Interpolation**
+<img src="Signal_plots_cubicsplines.png" width="350">
 
-After listening to the two restored files, we see that the signal sounds very similar to the original uncorrupted signal.
+3. Comparing the two different interpolation methods, we notice that method using median filter with a window length of 11 achieves a lower MSE when compared to cubic splines.
+
+After listening to the two restored files, we see that the signals sounds very similar to the original uncorrupted signal.Hence, a proper Audio restoration is performed.
 
 
 ---
